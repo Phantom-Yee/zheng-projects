@@ -1,0 +1,25 @@
+# ============================================================
+# CAN 总线攻击检测 — 依赖列表
+# 安装方式（在 PyCharm 终端或系统终端执行）：
+#   pip install -r requirements.txt
+#
+# GPU 用户：请先按官网装好对应 CUDA 版本的 PyTorch，再装本文件其余包：
+#   https://pytorch.org/get-started/locally/
+#   例：pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# ============================================================
+
+# 深度学习框架
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Hugging Face 生态
+transformers>=4.35.0
+accelerate>=1.1.0
+peft>=0.6.0
+
+# 量化（GPU 路径必须；CPU 路径会自动降级 INT8，可选安装）
+# bitsandbytes>=0.41.0    # GPU 环境取消注释；Linux/Windows GPU 均支持
+
+# 数据 / 统计
+scikit-learn>=1.2.0
+numpy>=1.23.0
